@@ -1,0 +1,55 @@
+0.          BMP     32 bit color    4,294,967,296 colors support
+            GIF     8 bit color     256 colors support
+            JPEG    24 bit color    16,777,216 colors support
+            PNG     24 bit color    16,777,216 colors support
+            
+1.          GIF
+
+2.          lossless is a compression method to display image with no degradation in accuracy.
+            lossy is a compression method to display image with some degradation in accuracy.
+
+3.          JPEG is lossy.
+
+4.          On FAT system, when a file is deleted 2 things happen, first, the file name flags the file indicating
+            that the file is deleted and can be recycled, second the flagged file to a free cluster, thus the fi-
+            le can be recovered using data recovery programs.
+
+5.          To ensure that files I delete cannot be recovered is by overwriting the data with random bits, and
+            the best practice is Gutmann method.
+
+6.          stdin.h is a part of stdio.j {stdin, stdout, stderr}
+            stdin is an input stream
+            stdou is an output stream
+            stderr is an error message stream
+
+7.          The point of using uint8_t, uint32_ti, nt32_t and uint16_t is to allocate the exact amount of data, which is as per
+            Bitmap specification in this case.
+            
+8.          BYTE    is 1 byte
+            DWORD   is 4 bytes
+            LONG    is 4 bytes
+            WORD    is 2 bytes
+
+9.          using xxd, bmp has a magic number of 0x42 0x4d
+
+10.         bfSize is the bitmap the data which is 246.
+            biSize  is the size of BITMAPINFOHEADER which is 40 when running: ./copy smiley.bmp copy.bmp
+
+11.         biHeight    if positive, a bottom-up DIB, this means the origin starts at the lower-left corner.
+            biHeight    if negative, a top-down DIB, this means the origin starts at the upper-left corner.
+            
+12.         biBitCount and in running: ./copy smiley.bmp copy.bmp, it states that smiley.bmp is 24-bit. 
+            
+13.         fopen open can return null if it can't find the file or the running program doesn't have the privilege to access the
+            file.
+            
+14.         1 is the number of elements to read, and since we are reading a struct 1 will do.
+
+15.         padding =   (4 - (3 * 3) % 4) % 4
+                    =   3
+            
+16.         fseek will adjust the stream indicator to offset "in this case padding" the current indicator.
+            
+17.         SEEK_CUR is the current position of the indicator
+            
+18.         RickRoll'D dunit!

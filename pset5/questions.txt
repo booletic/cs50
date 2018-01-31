@@ -1,0 +1,35 @@
+0.  pneumonoultramicroscopicsilicovolcanoconiosis is the longest word in the English dictionary, and it is a lung disease.
+
+1.  getrusage is a function that returns resource usage.
+
+2.  According to man getrusage, the are 2 structs, the first is struct timeval ru_utime and the second is struct timeval ru_utime.
+
+3.  The before and after are passed by reference because we don't want to pass a copy of the variable, we want the function to
+    update these variables. Moreover, the function per specification requires a pointer for rusage.
+    
+4.  For is true when next character in the file is not null.
+    the first if will check if the character is an alpha or apostrophes the get in; this will append the character to an array word
+    and the index will increment by one to indicates the current word length, if the index is greater than 45 then it is not a word
+    and index = 0.
+    The second id will check if the character is a digit, if so it is not a word and index = 0.
+    The last if in the loop will test index, if index is greater than 0 then it is a word; this step will append \0 indicating the
+    end of the word updates the word counter by 1 and test it against the dictionary if it is found the true else it is false in
+    update misspelled counter by 1.
+    Lastly, set index to 0 for the next word.
+    
+5.  fgetc will provide us with a greater control for validation, however, if we used fscanf we might encounter a string larger than
+    45 which will crash our program with a segmentation fault.
+    
+6.  The puts the parameters in a read-only mode because the value of these parameters is not variable.
+
+7.  Hashtable data structure was used, when a word is added the hash function decides where the world belongs, and to avoid
+    collision linked list was used.
+    
+8.  On the first attempt the code was running over 100 ms, I was able to chop away 30% using a different hash function, and other
+    methods discussed in question 9.
+
+9.  I choose a small prime number for the hash function which affected the computational time, I, even more, validation statements
+    to avoid unnecessary computation, I have noticed that there is a sweet spot for the size of the hash table and less or greater
+    will increase the computational time.
+    
+10. The load function is a bottleneck, I believe threading the load function is one way to optimize it.
